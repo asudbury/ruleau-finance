@@ -14,8 +14,6 @@ import {
 } from "@material-ui/core";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import AssignmentIcon from "@material-ui/icons/Assignment";
-import fetchCases from "../../services/slices/Cases";
-import { useDispatch } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -41,7 +39,6 @@ export default function ProcessCard({
   const classes = useStyles();
 
   const history = useHistory();
-  const dispatch = useDispatch();
 
   function onCasesToReview() {
     history.push("/process/" + processId + "/cases/?openclosed=1&result=3");
@@ -50,8 +47,6 @@ export default function ProcessCard({
   function onCasesOverridden() {
     history.push("/process/" + processId + "/cases/?openclosed=2&result=1");
   }
-
-  dispatch(fetchCases);
 
   return (
     <Card>

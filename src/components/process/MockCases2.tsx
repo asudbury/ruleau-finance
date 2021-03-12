@@ -9,7 +9,6 @@ import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import TableIcons from "../table/MockTableIcons";
 import { logInfo } from "../../utils/Logger";
 
-import GetCases from "../../services/selectors/GetCases";
 import { CaseMockData } from "../../mockData/CaseMockData";
 
 const useStyles = makeStyles((theme) => ({
@@ -45,8 +44,6 @@ export default function Cases({
   result,
   onCaseSelected,
 }: CasesProps) {
-  logInfo("Cases openClose=" + openClosed);
-  logInfo("Cases result=" + result);
 
   if (openClosed.length === 0) {
     openClosed = [];

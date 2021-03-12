@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import LogoIcon from "../src/components/icons/LogoIcon";
@@ -17,10 +16,8 @@ import createPersistedState from "use-persisted-state";
 
 import { getDarkTheme, getLightTheme } from "../src/themes/ThemeManager";
 
-import { logoutUser } from "./services/slices/user";
 import Settings from "./components/Settings";
 import LoggedOutStatus from "./components/login/LoggedOutStatus";
-import LoggedInStatus from "./components/login/LoggedInStatus";
 
 import IsUserLoggedIn from "./utils/IsUserLoggedIn";
 
@@ -73,8 +70,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const App = () => {
-  const dispatch = useDispatch();
-
   const classes = useStyles();
 
   const isLoggedIn = IsUserLoggedIn();
@@ -95,10 +90,6 @@ const App = () => {
   function onDarkModeChange() {
     setDarkState(!darkState);
     setAppTheme(appTheme === "dark" ? "light" : "dark");
-  }
-
-  function onLogout() {
-    dispatch(logoutUser());
   }
 
   function onLogin() {}
@@ -126,7 +117,6 @@ const App = () => {
                 />
               </div>
               <div>
-                {isLoggedIn && <LoggedInStatus onLogout={onLogout} />}
                 {!isLoggedIn && <LoggedOutStatus onLogin={onLogin} />}
               </div>
             </Toolbar>

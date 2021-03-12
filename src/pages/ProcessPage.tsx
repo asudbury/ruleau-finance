@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import { Box, makeStyles, Tabs, Tab, AppBar } from "@material-ui/core";
@@ -7,13 +6,11 @@ import SortIcon from "@material-ui/icons/Sort";
 import WorkIcon from "@material-ui/icons/Work";
 import TimelineIcon from "@material-ui/icons/Timeline";
 import Cases from "../components/process/MockCases2";
-import { fetchCases } from "../services/slices/Cases";
 import Rules from "../components/process/Rules";
 import VersionHistory from "../components/process/VersionHistory";
 
 export default function ProcessPage() {
   const history = useHistory();
-  const dispatch = useDispatch();
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -38,9 +35,6 @@ export default function ProcessPage() {
   const opencloseParam = urlParams.get("openclosed") || "";
   const resultParam = urlParams.get("result") || "";
 
-  console.log("ProcessPage opencloseParam=" + opencloseParam);
-  console.log("ProcessPage resultParam=" + resultParam);
-
   const openClosed: string[] = [opencloseParam];
   const result: string[] = [resultParam];
 
@@ -56,8 +50,6 @@ export default function ProcessPage() {
   }
 
   function onHistoryItemSelected(version: string) {}
-
-  dispatch(fetchCases({ config: {} }));
 
   return (
     <div className={classes.root}>
