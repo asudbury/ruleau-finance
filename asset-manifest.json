@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.js": "/ruleau-finance/static/js/main.d406ad3f.chunk.js",
+    "main.js.map": "/ruleau-finance/static/js/main.d406ad3f.chunk.js.map",
+    "runtime-main.js": "/ruleau-finance/static/js/runtime-main.0d12d8af.js",
+    "runtime-main.js.map": "/ruleau-finance/static/js/runtime-main.0d12d8af.js.map",
+    "static/js/2.915fa302.chunk.js": "/ruleau-finance/static/js/2.915fa302.chunk.js",
+    "static/js/2.915fa302.chunk.js.map": "/ruleau-finance/static/js/2.915fa302.chunk.js.map",
+    "static/js/3.67d5ae41.chunk.js": "/ruleau-finance/static/js/3.67d5ae41.chunk.js",
+    "static/js/3.67d5ae41.chunk.js.map": "/ruleau-finance/static/js/3.67d5ae41.chunk.js.map",
+    "static/js/4.eedee6ed.chunk.js": "/ruleau-finance/static/js/4.eedee6ed.chunk.js",
+    "static/js/4.eedee6ed.chunk.js.map": "/ruleau-finance/static/js/4.eedee6ed.chunk.js.map",
+    "static/js/5.b94eea67.chunk.js": "/ruleau-finance/static/js/5.b94eea67.chunk.js",
+    "static/js/5.b94eea67.chunk.js.map": "/ruleau-finance/static/js/5.b94eea67.chunk.js.map",
+    "index.html": "/ruleau-finance/index.html",
+    "static/js/2.915fa302.chunk.js.LICENSE.txt": "/ruleau-finance/static/js/2.915fa302.chunk.js.LICENSE.txt",
+    "static/js/3.67d5ae41.chunk.js.LICENSE.txt": "/ruleau-finance/static/js/3.67d5ae41.chunk.js.LICENSE.txt",
+    "static/js/4.eedee6ed.chunk.js.LICENSE.txt": "/ruleau-finance/static/js/4.eedee6ed.chunk.js.LICENSE.txt",
+    "static/js/5.b94eea67.chunk.js.LICENSE.txt": "/ruleau-finance/static/js/5.b94eea67.chunk.js.LICENSE.txt",
+    "static/media/account.2778bed0.svg": "/ruleau-finance/static/media/account.2778bed0.svg",
+    "static/media/logo.c304c24e.svg": "/ruleau-finance/static/media/logo.c304c24e.svg",
+    "static/media/settings.f3f6e70c.svg": "/ruleau-finance/static/media/settings.f3f6e70c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d12d8af.js",
+    "static/js/2.915fa302.chunk.js",
+    "static/js/main.d406ad3f.chunk.js"
+  ]
+}
