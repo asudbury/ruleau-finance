@@ -1,0 +1,56 @@
+{
+  "id": "45ed8752-288c-488f-918c-29762c75640c",
+  "case_status": false,
+  "payload": {
+    "fico_score": 150,
+    "ccjs": [],
+    "kyc": "low"
+  },
+  "rules": [
+    {
+      "id": "20a2c13b-db69-4b78-8bde-703b5cdf62ec",
+      "name": "kyc_risk_greater_than_threshold",
+      "description": null,
+      "result": {
+        "result": false
+      },
+      "order": 1,
+      "dependencies": []
+    },
+    {
+      "id": "4a14a808-592f-4541-95ad-703b5cdf62ec",
+      "name": "fico_score_greater_than_threshold",
+      "description": null,
+      "result": {
+        "result": false
+      },
+      "order": 1,
+      "dependencies": []
+    },
+    {
+      "id": "49e2f19f-3823-43c2-a028-703b5cdf62ec",
+      "name": "has_no_ccjs",
+      "description": null,
+      "result": {
+        "result": true
+      },
+      "order": 1,
+      "dependencies": []
+    },
+    {
+      "id": "be2db303-0f62-47e7-8695-703b5cdf62ec",
+      "name": "all_aggregator",
+      "description": null,
+      "result": {
+        "result": false
+      },
+      "order": 0,
+      "dependencies": [
+        "20a2c13b-db69-4b78-8bde-703b5cdf62ec",
+        "49e2f19f-3823-43c2-a028-703b5cdf62ec",
+        "4a14a808-592f-4541-95ad-703b5cdf62ec"
+      ]
+    }
+  ],
+  "created_at": "2021-02-26T06:30:57.401854Z"
+}

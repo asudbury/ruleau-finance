@@ -1,0 +1,31 @@
+import { Grid, Typography } from "@material-ui/core";
+import { Variant } from "@material-ui/core/styles/createTypography";
+
+interface LabelAndValueProps {
+  variant: Variant;
+  label: string;
+  value: string;
+}
+
+export default function LabelAndValue({
+  variant,
+  label,
+  value,
+}: LabelAndValueProps) {
+  return (
+    <Grid
+      container
+      spacing={1}
+      direction="row"
+      justify="flex-start"
+      alignItems="flex-start"
+    >
+      <Grid item>
+        <Typography variant={variant}>{label} :</Typography>
+      </Grid>
+      <Grid item>
+        <Typography variant={variant}>{value}</Typography>
+      </Grid>
+    </Grid>
+  );
+}

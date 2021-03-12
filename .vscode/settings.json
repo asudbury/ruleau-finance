@@ -1,0 +1,8 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#13069C",
+        "titleBar.activeBackground": "#1B09DA",
+        "titleBar.activeForeground": "#F9F9FF"
+    },
+    "sonarlint.disableTelemetry": true
+}
