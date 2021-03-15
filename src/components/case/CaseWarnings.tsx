@@ -35,13 +35,13 @@ export default function CaseWarnings() {
                   The following rules require attention:
                 </Typography>
                 <CaseWarning
-                  ruleName="r12"
-                  ruleDescription="Customer must be over 18"
+                  ruleName="RUL001"
+                  ruleDescription="KYC Risk is low"
                   onRuleWarningSelected={handleRuleWarningSelected}
                 />
                 <CaseWarning
-                  ruleName="r13"
-                  ruleDescription="Customer must be a high earner"
+                  ruleName="RUL004"
+                  ruleDescription="No CCJs"
                   onRuleWarningSelected={handleRuleWarningSelected}
                 />
               </CardContent>

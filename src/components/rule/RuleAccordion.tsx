@@ -27,7 +27,7 @@ export default function RuleAccordion({
   const classes = useStyles();
 
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={3}>
       {!isRuleDefinition && (
         <Grid item>
           {hasWarning && <WarningIcon className={classes.warning} />}
@@ -37,7 +37,7 @@ export default function RuleAccordion({
       <Grid item>
         <Typography>{ruleName}</Typography>
       </Grid>
-      <Grid item>
+      <Grid item style={{ minWidth: 200 }}>
         <Typography>{ruleDescription}</Typography>
       </Grid>
       <Grid item>

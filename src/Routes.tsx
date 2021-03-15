@@ -19,6 +19,16 @@ export default function Routes(): JSX.Element {
           path="/process/:processId/statistics"
           component={ProcessPage}
         />
+        <Route
+          exact
+          path="/process/:processId/overview"
+          component={ProcessPage}
+        />
+        <Route
+          exact
+          path="/process/:processId/statistics"
+          component={ProcessPage}
+        />
 
         <Route
           exact

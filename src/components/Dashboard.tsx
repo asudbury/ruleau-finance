@@ -23,22 +23,31 @@ export default function Dashboard() {
             <Typography variant="h5">My Processes</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={12}>
           <ProcessCard
             processId={1}
             title="Platinum Credit Card"
-            userDescription="Top of the range Credit Card"
+            userDescription="Our premiere credit card offering"
             casesToReviewCount={7}
             casesOverriddenCount={21}
           />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={12}>
           <ProcessCard
             processId={2}
             title="Entry Level Credit Card"
-            userDescription="Student Friendly Credit Card"
+            userDescription="Student friendly credit offering"
             casesToReviewCount={4}
             casesOverriddenCount={65}
+          />
+        </Grid>
+        <Grid item xs={12} md={12}>
+          <ProcessCard
+            processId={2}
+            title="1.49% Fixed 60% LTV 2 year Mortgage 2021"
+            userDescription="2 Year Fixed Fee saver"
+            casesToReviewCount={12}
+            casesOverriddenCount={7}
           />
         </Grid>
       </Grid>

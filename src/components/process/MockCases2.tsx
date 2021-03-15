@@ -9,7 +9,7 @@ import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import TableIcons from "../table/MockTableIcons";
 import { logInfo } from "../../utils/Logger";
 
-import { CaseMockData } from "../../mockData/CaseMockData";
+import { CaseMockData } from "../../mockData/CaseMockDataFinance";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -44,7 +44,6 @@ export default function Cases({
   result,
   onCaseSelected,
 }: CasesProps) {
-
   if (openClosed.length === 0) {
     openClosed = [];
   }
@@ -118,8 +117,7 @@ export default function Cases({
               },
               render: (rowData) => (
                 <div className={classes.nowrap}>
-                  <WorkIcon fontSize="small" color="primary" />{" "}
-                  {rowData.caseID}
+                  <WorkIcon fontSize="small" color="primary" /> {rowData.caseID}
                 </div>
               ),
             },

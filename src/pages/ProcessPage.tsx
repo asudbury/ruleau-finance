@@ -5,9 +5,13 @@ import { Box, makeStyles, Tabs, Tab, AppBar } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import WorkIcon from "@material-ui/icons/Work";
 import TimelineIcon from "@material-ui/icons/Timeline";
+import EqualizerIcon from "@material-ui/icons/Equalizer";
+import ZoomInIcon from "@material-ui/icons/ZoomIn";
 import Cases from "../components/process/MockCases2";
 import Rules from "../components/process/Rules";
 import VersionHistory from "../components/process/VersionHistory";
+import Statistics from "../components/process/Statistics";
+import Overview from "../components/process/Overview";
 
 export default function ProcessPage() {
   const history = useHistory();
@@ -22,13 +26,29 @@ export default function ProcessPage() {
 
   const classes = useStyles();
 
-  const [value, setValue] = useState(0);
-
   enum TabValue {
     Cases,
     Rules,
     History,
+    Statistics,
+    Overview,
   }
+
+  let selectedTabValue = TabValue.Cases;
+
+  if (window.location.toString().endsWith("rules")) {
+    selectedTabValue = TabValue.Rules;
+  }
+
+  if (window.location.toString().endsWith("statistics")) {
+    selectedTabValue = TabValue.Statistics;
+  }
+
+  if (window.location.toString().endsWith("overview")) {
+    selectedTabValue = TabValue.Overview;
+  }
+
+  const [value, setValue] = useState(selectedTabValue);
 
   const urlParams = new URLSearchParams(window.location.search);
 
@@ -74,6 +94,16 @@ export default function ProcessPage() {
               label="History"
               value={TabValue.History}
             />
+            <Tab
+              icon={<EqualizerIcon />}
+              label="Statistics"
+              value={TabValue.Statistics}
+            />
+            <Tab
+              icon={<ZoomInIcon />}
+              label="Overview"
+              value={TabValue.Overview}
+            />
           </Tabs>
         </AppBar>
         {value === 0 && (
@@ -87,6 +117,8 @@ export default function ProcessPage() {
         {value === 2 && (
           <VersionHistory onHistoryItemSelected={onHistoryItemSelected} />
         )}
+        {value === 3 && <Statistics />}
+        {value === 4 && <Overview />}
       </Box>
     </div>
   );

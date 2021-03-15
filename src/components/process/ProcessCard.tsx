@@ -41,13 +41,32 @@ export default function ProcessCard({
   const history = useHistory();
 
   function onCasesToReview() {
+    sessionStorage.setItem("processTitle", title);
+    sessionStorage.setItem("processUserDescription", userDescription);
+
     history.push("/process/" + processId + "/cases/?openclosed=1&result=3");
   }
 
   function onCasesOverridden() {
+    sessionStorage.setItem("processTitle", title);
+    sessionStorage.setItem("processUserDescription", userDescription);
+
     history.push("/process/" + processId + "/cases/?openclosed=2&result=1");
   }
 
+  function onStatistics() {
+    sessionStorage.setItem("processTitle", title);
+    sessionStorage.setItem("processUserDescription", userDescription);
+
+    history.push("/process/" + processId + "/statistics");
+  }
+
+  function onOverview() {
+    sessionStorage.setItem("processTitle", title);
+    sessionStorage.setItem("processUserDescription", userDescription);
+
+    history.push("/process/" + processId + "/overview");
+  }
   return (
     <Card>
       <CardHeader
@@ -90,6 +109,32 @@ export default function ProcessCard({
                   Cases Overridden
                 </Button>
               </Badge>
+            </FormControl>
+          </Grid>
+          <Grid item>
+            <FormControl className={classes.formControl}>
+              <Button
+                data-testid="overriddenButton"
+                className={classes.formControl}
+                variant="outlined"
+                startIcon={<AssignmentIcon color="action" />}
+                onClick={onStatistics}
+              >
+                Process Statistics
+              </Button>
+            </FormControl>
+          </Grid>
+          <Grid item>
+            <FormControl className={classes.formControl}>
+              <Button
+                data-testid="overriddenButton"
+                className={classes.formControl}
+                variant="outlined"
+                startIcon={<AssignmentIcon color="action" />}
+                onClick={onOverview}
+              >
+                Process Overview
+              </Button>
             </FormControl>
           </Grid>
         </Grid>

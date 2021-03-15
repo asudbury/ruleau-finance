@@ -20,9 +20,9 @@ export default function CaseRules(): JSX.Element {
           <RuleSummary
             isRuleDefinition={false}
             hasWarning={true}
-            ruleName="r12"
-            ruleDescription="Customer must be over 18"
-            ruleSubDescription="This card is only available to adults"
+            ruleName="RUL001"
+            ruleDescription="KYC Risk is low"
+            ruleSubDescription="Check KYC customer risk to ensure it is within parameters"
           />
         </AccordionSummary>
         <AccordionDetails>
@@ -38,9 +38,63 @@ export default function CaseRules(): JSX.Element {
           <RuleSummary
             isRuleDefinition={false}
             hasWarning={false}
-            ruleName="r13"
-            ruleDescription="Income must be over £50k"
-            ruleSubDescription="Regular income must be over £50,000 per year"
+            ruleName="RUL002"
+            ruleDescription="No bankruptcy flag"
+            ruleSubDescription="Borrower should not have filed any bankruptcies"
+          />
+        </AccordionSummary>
+        <AccordionDetails>
+          <RuleDetails canBeOverridden={false} />
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <RuleSummary
+            isRuleDefinition={false}
+            hasWarning={false}
+            ruleName="RUL003"
+            ruleDescription="No open tax liens"
+            ruleSubDescription="Borrower should not have any open tax liens"
+          />
+        </AccordionSummary>
+        <AccordionDetails>
+          <RuleDetails canBeOverridden={false} />
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <RuleSummary
+            isRuleDefinition={false}
+            hasWarning={true}
+            ruleName="RUL004"
+            ruleDescription="No CCJs"
+            ruleSubDescription="Borrower should not have any County Court Judgements"
+          />
+        </AccordionSummary>
+        <AccordionDetails>
+          <RuleDetails canBeOverridden={false} />
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <RuleSummary
+            isRuleDefinition={false}
+            hasWarning={false}
+            ruleName="RUL005"
+            ruleDescription="No hard enquiries"
+            ruleSubDescription="Borrower should not have any hard enquiries in the past 6 months"
           />
         </AccordionSummary>
         <AccordionDetails>
