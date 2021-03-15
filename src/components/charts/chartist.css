@@ -1,10 +1,3 @@
-.ct-label {
-  fill: rgba(0, 0, 0, 0.4);
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 0.75rem;
-  line-height: 1;
-}
-
 .ct-chart-line .ct-label,
 .ct-chart-bar .ct-label {
   display: block;
@@ -190,13 +183,13 @@
 .ct-series-a .ct-line,
 .ct-series-a .ct-bar,
 .ct-series-a .ct-slice-donut {
-  stroke: #d70206;
+  stroke: #12dcff;
 }
 
 .ct-series-a .ct-slice-pie,
 .ct-series-a .ct-slice-donut-solid,
 .ct-series-a .ct-area {
-  fill: #d70206;
+  fill: #12dcff;
 }
 
 .ct-series-b .ct-point,

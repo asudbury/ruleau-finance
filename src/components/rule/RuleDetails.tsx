@@ -12,9 +12,13 @@ import { logInfo } from "../../utils/Logger";
 
 interface RuleDetailsProps {
   canBeOverridden: boolean;
+  overrideMessage: string;
 }
 
-export default function RuleDetails({ canBeOverridden }: RuleDetailsProps) {
+export default function RuleDetails({
+  canBeOverridden,
+  overrideMessage,
+}: RuleDetailsProps) {
   const [showDocumentation, setShowDocumentation] = React.useState<boolean>(
     false
   );
@@ -33,8 +37,6 @@ export default function RuleDetails({ canBeOverridden }: RuleDetailsProps) {
     logInfo("handleSaveOverride");
     setHasOverride(true);
   }
-
-  logInfo("hasOverride=" + hasOverride);
 
   return (
     <Grid container spacing={1}>
@@ -66,6 +68,7 @@ export default function RuleDetails({ canBeOverridden }: RuleDetailsProps) {
           canBeOverridden={canBeOverridden}
           onSaveOverride={handleSaveOverride}
           onRemoveOverride={handleRemoveOverride}
+          overrideMessage={overrideMessage}
         />
       </Grid>
     </Grid>

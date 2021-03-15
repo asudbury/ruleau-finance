@@ -71,14 +71,17 @@ export default function ProcessPage() {
 
   function onHistoryItemSelected(version: string) {}
 
+  const processTitle = sessionStorage.getItem("processTitle");
+  const processDesc = sessionStorage.getItem("processUserDescription");
+
   return (
     <div className={classes.root}>
       <Box p={5}>
         <Typography variant="h5" gutterBottom>
-          Process: Unknown
+          Process: {processTitle}
         </Typography>
         <Typography variant="body1" gutterBottom>
-          User Supplied Description
+          {processDesc}
         </Typography>
         <AppBar position="static">
           <Tabs

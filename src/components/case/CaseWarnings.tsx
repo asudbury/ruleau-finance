@@ -21,7 +21,7 @@ export default function CaseWarnings() {
   const classes = useStyles();
 
   function handleRuleWarningSelected(rule: string) {
-    alert("hello " + rule);
+    console.log("hello " + rule);
   }
 
   return (

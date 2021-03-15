@@ -20,6 +20,7 @@ interface RuleOverrideProps {
   canBeOverridden: boolean;
   onSaveOverride: () => void;
   onRemoveOverride: () => void;
+  overrideMessage: string;
 }
 
 export default function RuleOverride({
@@ -27,6 +28,7 @@ export default function RuleOverride({
   canBeOverridden,
   onSaveOverride,
   onRemoveOverride,
+  overrideMessage,
 }: RuleOverrideProps) {
   logInfo("hasOverride=" + hasOverride);
 
@@ -92,8 +94,7 @@ export default function RuleOverride({
       <Grid item xs={12}>
         {!hasOverride && canBeOverridden && (
           <Typography gutterBottom variant="caption">
-            Only override if customer is expecting income to raise in the near
-            future
+            {overrideMessage}
           </Typography>
         )}
       </Grid>

@@ -2,11 +2,10 @@ const LineChartWithArea = {
   title: " Cases processed per day",
   type: "Line",
   data: {
-    labels: [1, 2, 3, 4, 5, 6, 7, 8],
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     series: [[5, 9, 7, 8, 5, 3, 5, 4]],
   },
   options: {
-    low: 0,
     showArea: true,
   },
 };

@@ -26,7 +26,7 @@ export default function CaseRules(): JSX.Element {
           />
         </AccordionSummary>
         <AccordionDetails>
-          <RuleDetails canBeOverridden={true} />
+          <RuleDetails canBeOverridden={false} overrideMessage="" />
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -44,7 +44,10 @@ export default function CaseRules(): JSX.Element {
           />
         </AccordionSummary>
         <AccordionDetails>
-          <RuleDetails canBeOverridden={false} />
+          <RuleDetails
+            canBeOverridden={true}
+            overrideMessage="Strong evidence of steady income needed to override"
+          />
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -62,7 +65,10 @@ export default function CaseRules(): JSX.Element {
           />
         </AccordionSummary>
         <AccordionDetails>
-          <RuleDetails canBeOverridden={false} />
+          <RuleDetails
+            canBeOverridden={true}
+            overrideMessage="Open tax lien must be about to expire or < £100/month"
+          />
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -80,7 +86,10 @@ export default function CaseRules(): JSX.Element {
           />
         </AccordionSummary>
         <AccordionDetails>
-          <RuleDetails canBeOverridden={false} />
+          <RuleDetails
+            canBeOverridden={true}
+            overrideMessage="Only override on manager’s authority"
+          />
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -98,7 +107,10 @@ export default function CaseRules(): JSX.Element {
           />
         </AccordionSummary>
         <AccordionDetails>
-          <RuleDetails canBeOverridden={false} />
+          <RuleDetails
+            canBeOverridden={true}
+            overrideMessage="Confirm hard enquiry is about to expire"
+          />
         </AccordionDetails>
       </Accordion>
     </div>
