@@ -1,6 +1,4 @@
 import React from "react";
-import CardContent from "@material-ui/core/CardContent";
-import Card from "@material-ui/core/Card";
 import { Grid, Link, makeStyles, Typography } from "@material-ui/core";
 import WarningIcon from "@material-ui/icons/Warning";
 
@@ -34,10 +32,10 @@ export default function CaseWarning({
   return (
     <Grid item xs={12}>
       <Grid container spacing={4}>
-        <Grid item>
+        <Grid item style={{ width: 50 }}>
           <WarningIcon className={classes.warning} />
         </Grid>
-        <Grid item>
+        <Grid item style={{ minWidth: 120 }}>
           <Link
             href="#"
             className={classes.warning}

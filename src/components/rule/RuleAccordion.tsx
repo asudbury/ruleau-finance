@@ -34,10 +34,10 @@ export default function RuleAccordion({
           {!hasWarning && <DoneIcon />}
         </Grid>
       )}
-      <Grid item>
+      <Grid item style={{ minWidth: 120 }}>
         <Typography>{ruleName}</Typography>
       </Grid>
-      <Grid item style={{ minWidth: 200 }}>
+      <Grid item style={{ minWidth: 385 }}>
         <Typography>{ruleDescription}</Typography>
       </Grid>
       <Grid item>
