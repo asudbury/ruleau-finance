@@ -28,8 +28,8 @@ export default function Dashboard() {
             processId={1}
             title="Platinum Credit Card"
             userDescription="Our premiere credit card offering"
-            casesToReviewCount={7}
-            casesOverriddenCount={21}
+            casesToReviewCount={10}
+            casesOverriddenCount={4}
           />
         </Grid>
         <Grid item xs={12} md={12}>
@@ -37,8 +37,8 @@ export default function Dashboard() {
             processId={2}
             title="Entry Level Credit Card"
             userDescription="Student friendly credit offering"
-            casesToReviewCount={4}
-            casesOverriddenCount={65}
+            casesToReviewCount={10}
+            casesOverriddenCount={4}
           />
         </Grid>
         <Grid item xs={12} md={12}>
@@ -46,8 +46,8 @@ export default function Dashboard() {
             processId={2}
             title="1.49% Fixed 60% LTV 2 year Mortgage 2021"
             userDescription="2 Year Fixed Fee saver"
-            casesToReviewCount={12}
-            casesOverriddenCount={7}
+            casesToReviewCount={10}
+            casesOverriddenCount={4}
           />
         </Grid>
       </Grid>
