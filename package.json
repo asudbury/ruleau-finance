@@ -1,7 +1,7 @@
 {
   "homepage": "http://asudbury.github.io/ruleau-finance",
   "name": "ruleau-finance",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
