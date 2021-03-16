@@ -30,7 +30,13 @@ export default function Rules() {
         <AccordionDetails>
           <Box>
             <RuleSource />
-            <RuleDocumentation showSwitch={true} />
+            <RuleDocumentation
+              showSwitch={true}
+              ruleName="RUL001"
+              ruleDescription="KYC Risk is low"
+              ruleSubDescription="Check KYC customer risk to ensure it is within parameters"
+              overrideLevel="NO OVERRIDE"
+            />
           </Box>
         </AccordionDetails>
       </Accordion>
@@ -51,7 +57,13 @@ export default function Rules() {
         <AccordionDetails>
           <Box>
             <RuleSource />
-            <RuleDocumentation showSwitch={true} />
+            <RuleDocumentation
+              showSwitch={true}
+              ruleName="RUL002"
+              ruleDescription="No bankruptcy flag"
+              ruleSubDescription="Borrower should not have filed any bankruptcies"
+              overrideLevel="2"
+            />
           </Box>
         </AccordionDetails>
       </Accordion>
@@ -72,7 +84,13 @@ export default function Rules() {
         <AccordionDetails>
           <Box>
             <RuleSource />
-            <RuleDocumentation showSwitch={true} />
+            <RuleDocumentation
+              showSwitch={true}
+              ruleName="RUL003"
+              ruleDescription="No open tax liens"
+              ruleSubDescription="Borrower should not have any open tax liens"
+              overrideLevel="2"
+            />
           </Box>
         </AccordionDetails>
       </Accordion>
@@ -93,7 +111,13 @@ export default function Rules() {
         <AccordionDetails>
           <Box>
             <RuleSource />
-            <RuleDocumentation showSwitch={true} />
+            <RuleDocumentation
+              showSwitch={true}
+              ruleName="RUL004"
+              ruleDescription="No CCJs"
+              ruleSubDescription="Borrower should not have any County Court Judgements"
+              overrideLevel="3"
+            />
           </Box>
         </AccordionDetails>
       </Accordion>
@@ -114,7 +138,13 @@ export default function Rules() {
         <AccordionDetails>
           <Box>
             <RuleSource />
-            <RuleDocumentation showSwitch={true} />
+            <RuleDocumentation
+              showSwitch={true}
+              ruleName="RUL005"
+              ruleDescription="No hard enquiries"
+              ruleSubDescription="Borrower should not have any hard enquiries in the past 6 months"
+              overrideLevel="1"
+            />
           </Box>
         </AccordionDetails>
       </Accordion>

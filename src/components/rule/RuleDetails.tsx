@@ -13,11 +13,19 @@ import { logInfo } from "../../utils/Logger";
 interface RuleDetailsProps {
   canBeOverridden: boolean;
   overrideMessage: string;
+  ruleName: string;
+  ruleDescription: string;
+  ruleSubDescription: string;
+  overrideLevel: string;
 }
 
 export default function RuleDetails({
   canBeOverridden,
   overrideMessage,
+  ruleName,
+  ruleDescription,
+  ruleSubDescription,
+  overrideLevel,
 }: RuleDetailsProps) {
   const [showDocumentation, setShowDocumentation] = React.useState<boolean>(
     false
@@ -57,7 +65,13 @@ export default function RuleDetails({
         {showDocumentation && (
           <div>
             <Divider />
-            <RuleDocumentation showSwitch={false} />
+            <RuleDocumentation
+              showSwitch={false}
+              ruleName={ruleName}
+              ruleDescription={ruleDescription}
+              ruleSubDescription={ruleSubDescription}
+              overrideLevel={overrideLevel}
+            />
           </div>
         )}
       </Grid>

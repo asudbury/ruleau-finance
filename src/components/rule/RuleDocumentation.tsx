@@ -21,16 +21,26 @@ import LabelAndValue from "../core/LabelAndValue";
 
 interface RuleDocumentationProps {
   showSwitch: boolean;
+  ruleName: string;
+  ruleDescription: string;
+  ruleSubDescription: string;
+  overrideLevel: string;
 }
 
 export default function RuleDocumentation({
   showSwitch,
+  ruleName,
+  ruleDescription,
+  ruleSubDescription,
+  overrideLevel,
 }: RuleDocumentationProps) {
   const [showDocumentation, setShowDocumentation] = React.useState(true);
 
   function handleShowDocumentation() {
     setShowDocumentation(!showDocumentation);
   }
+
+  const description = ruleDescription + " - " + ruleSubDescription;
 
   return (
     <div>
@@ -57,15 +67,17 @@ export default function RuleDocumentation({
               <LabelAndValue
                 variant="body2"
                 label="Rule Identifier"
-                value="Function name is used as title"
+                value={ruleName}
               />
-              <Typography variant="body2">
-                Description taken from docstring
-              </Typography>
+              <LabelAndValue
+                variant="body2"
+                label="Description"
+                value={description}
+              />
               <LabelAndValue
                 variant="body2"
                 label="Override Level"
-                value="Not Overrideable"
+                value={overrideLevel}
               />
               <LabelAndValue
                 variant="body2"

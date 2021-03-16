@@ -26,7 +26,14 @@ export default function CaseRules(): JSX.Element {
           />
         </AccordionSummary>
         <AccordionDetails>
-          <RuleDetails canBeOverridden={false} overrideMessage="" />
+          <RuleDetails
+            canBeOverridden={false}
+            overrideMessage=""
+            ruleName="RUL001"
+            ruleDescription="KYC Risk is low"
+            ruleSubDescription="Check KYC customer risk to ensure it is within parameters"
+            overrideLevel="NO OVERRIDE"
+          />
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -47,6 +54,10 @@ export default function CaseRules(): JSX.Element {
           <RuleDetails
             canBeOverridden={true}
             overrideMessage="Strong evidence of steady income needed to override"
+            ruleName="RUL002"
+            ruleDescription="No bankruptcy flag"
+            ruleSubDescription="Borrower should not have filed any bankruptcies"
+            overrideLevel="2"
           />
         </AccordionDetails>
       </Accordion>
@@ -68,6 +79,10 @@ export default function CaseRules(): JSX.Element {
           <RuleDetails
             canBeOverridden={true}
             overrideMessage="Open tax lien must be about to expire or < £100/month"
+            ruleName="RUL003"
+            ruleDescription="No open tax liens"
+            ruleSubDescription="Borrower should not have any open tax liens"
+            overrideLevel="2"
           />
         </AccordionDetails>
       </Accordion>
@@ -89,6 +104,10 @@ export default function CaseRules(): JSX.Element {
           <RuleDetails
             canBeOverridden={true}
             overrideMessage="Only override on manager’s authority"
+            ruleName="RUL004"
+            ruleDescription="No CCJs"
+            ruleSubDescription="Borrower should not have any County Court Judgements"
+            overrideLevel="3"
           />
         </AccordionDetails>
       </Accordion>
@@ -110,6 +129,10 @@ export default function CaseRules(): JSX.Element {
           <RuleDetails
             canBeOverridden={true}
             overrideMessage="Confirm hard enquiry is about to expire"
+            ruleName="RUL005"
+            ruleDescription="No hard enquiries"
+            ruleSubDescription="Borrower should not have any hard enquiries in the past 6 months"
+            overrideLevel="1"
           />
         </AccordionDetails>
       </Accordion>
