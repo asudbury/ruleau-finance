@@ -63,9 +63,11 @@ export default function ProcessPage() {
   };
 
   function onCaseSelected(caseID: string) {
+    const processId = sessionStorage.getItem("processId");
+
     history.push(
       // eslint-disable-next-line no-useless-concat
-      "/process/" + "unknown" + "/case/" + caseID
+      "/process/" + processId + "/case/" + caseID
     );
   }
 

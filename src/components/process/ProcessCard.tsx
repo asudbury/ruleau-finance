@@ -40,31 +40,29 @@ export default function ProcessCard({
 
   const history = useHistory();
 
-  function onCasesToReview() {
+  function setSessionVariables() {
+    sessionStorage.setItem("processId", processId.toString());
     sessionStorage.setItem("processTitle", title);
     sessionStorage.setItem("processUserDescription", userDescription);
+  }
 
+  function onCasesToReview() {
+    setSessionVariables();
     history.push("/process/" + processId + "/cases/?openclosed=1&result=3");
   }
 
   function onCasesOverridden() {
-    sessionStorage.setItem("processTitle", title);
-    sessionStorage.setItem("processUserDescription", userDescription);
-
+    setSessionVariables();
     history.push("/process/" + processId + "/cases/?openclosed=2&result=1");
   }
 
   function onStatistics() {
-    sessionStorage.setItem("processTitle", title);
-    sessionStorage.setItem("processUserDescription", userDescription);
-
+    setSessionVariables();
     history.push("/process/" + processId + "/statistics");
   }
 
   function onOverview() {
-    sessionStorage.setItem("processTitle", title);
-    sessionStorage.setItem("processUserDescription", userDescription);
-
+    setSessionVariables();
     history.push("/process/" + processId + "/overview");
   }
   return (
