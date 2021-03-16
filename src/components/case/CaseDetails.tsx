@@ -35,7 +35,7 @@ export default function CaseDetails({
   if (storageItem) {
     caseId = storageItem;
   }
-  
+
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6}>
@@ -68,7 +68,20 @@ export default function CaseDetails({
           value="05 March 1980"
         />
       </Grid>
-
+      <Grid item xs={12} sm={6}>
+        <LabelAndValue
+          variant="body1"
+          label="Customer ID"
+          value="C33-44-567813"
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <LabelAndValue
+          variant="body1"
+          label="Account Number"
+          value="345672345"
+        />
+      </Grid>
       <Grid item xs={12} sm={6}>
         {!isClosed && (
           <Button
