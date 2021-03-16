@@ -84,6 +84,7 @@ export default function Cases({
     if (selectedRow) {
       const caseId = selectedRow.caseID;
 
+      sessionStorage.setItem("caseID", caseId);
       onCaseSelected(caseId);
     }
   }

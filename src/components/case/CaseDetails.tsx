@@ -27,10 +27,19 @@ export default function CaseDetails({
   function handleShowPayload() {
     setShowPayload(!showPayload);
   }
+
+  let caseId = "Unknown";
+
+  const storageItem = sessionStorage.getItem("caseID");
+
+  if (storageItem) {
+    caseId = storageItem;
+  }
+  
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6}>
-        <LabelAndValue variant="h5" label="Case" value="Unknown" />
+        <LabelAndValue variant="h5" label="Case" value={caseId} />
       </Grid>
       <Grid item xs={12} sm={6}>
         <div style={{ display: "flex", alignItems: "baseline" }}>
@@ -50,13 +59,13 @@ export default function CaseDetails({
         />
       </Grid>
       <Grid item xs={12} sm={6}>
-        <LabelAndValue variant="body1" label="Name" value="Test Application" />
+        <LabelAndValue variant="body1" label="Name" value="John Smith" />
       </Grid>
       <Grid item xs={12} sm={6}>
         <LabelAndValue
           variant="body1"
           label="Date of Birth"
-          value="03 March 1975"
+          value="05 March 1980"
         />
       </Grid>
 
