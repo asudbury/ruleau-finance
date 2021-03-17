@@ -44,7 +44,8 @@ export const themeOptions: ThemeOptions = {
     },
     MuiCard: {
       root: {
-        borderRadius: "2em",
+        borderRadius: "0.8em",
+        backgroundColor: "#1c1c1c",
       },
     },
   },
