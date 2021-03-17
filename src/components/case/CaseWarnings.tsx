@@ -13,7 +13,7 @@ import CaseWarning from "./CaseWarning";
 const useStyles = makeStyles((theme) => ({
   customBorder: {
     border: `3px solid ${theme.palette.warning.main}`,
-    borderRadius: 25,
+    borderRadius: 15,
   },
 }));
 
