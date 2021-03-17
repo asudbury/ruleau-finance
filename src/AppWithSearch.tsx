@@ -99,7 +99,14 @@ const App = () => {
 
   function handleKeyPress(event: { key: string }) {
     if (event.key === "Enter") {
-      window.location.href = "/process/1/case/MORR:009341800029707";
+      let location = "/process/1/case/MORR:009341800029707";
+
+      if (window.location.href.indexOf("github.io") > -1) {
+        console.log("we are on githubpages!");
+        location = "https://asudbury.github.io/ruleau-finance" + location;
+      }
+      console.log(location);
+      window.location.href = location;
     }
   }
 
