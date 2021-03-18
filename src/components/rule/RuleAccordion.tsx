@@ -41,7 +41,7 @@ export default function RuleAccordion({
         <Typography>{ruleDescription}</Typography>
       </Grid>
       <Grid item>
-        <Typography>{ruleSubDescription}</Typography>
+        <Typography variant="body2">{ruleSubDescription}</Typography>
       </Grid>
     </Grid>
   );
