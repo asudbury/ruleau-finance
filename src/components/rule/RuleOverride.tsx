@@ -109,6 +109,16 @@ export default function RuleOverride({
             />
           </FormControl>
         )}
+        {hasOverride && canBeOverridden && (
+          <FormControl style={{ width: `50%` }}>
+            <TextField
+              label="Removal Reason"
+              multiline
+              rows={6}
+              variant="filled"
+            />
+          </FormControl>
+        )}
       </Grid>
       <Grid item xs={11}>
         {!hasOverride && canBeOverridden && (
