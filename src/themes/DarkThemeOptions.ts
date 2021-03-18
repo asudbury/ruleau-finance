@@ -24,4 +24,42 @@ export const themeOptions: ThemeOptions = {
       hint: "#B7B7B7",
     },
   },
+  overrides: {
+    MuiAppBar: {
+      colorPrimary: {
+        backgroundColor: "#161617",
+        color: "#ffff",
+      },
+    },
+    MuiButton: {
+      root: {
+        borderRadius: "2em",
+      },
+    },
+    MuiTabs: {
+      indicator: {
+        height: "0.3em",
+      },
+    },
+    MuiTab: {
+      wrapper: {
+        flexDirection: "row",
+      },
+      root: {
+        backgroundColor: "#161617",
+        color: "#0000000",
+      },
+    },
+    MuiSvgIcon: {
+      root: {
+        width: "1.3em",
+      },
+    },
+    MuiCard: {
+      root: {
+        borderRadius: "0.8em",
+        backgroundColor: "#1c1c1c",
+      },
+    },
+  },
 };

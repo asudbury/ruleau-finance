@@ -10,8 +10,8 @@ export function getAppTheme(): Theme {
 
 export function getDarkTheme(): Theme {
   let darkTheme = createMuiTheme({
-    ...darkThemeOptions,
     ...commonThemeOptions,
+    ...darkThemeOptions,
   });
   darkTheme = responsiveFontSizes(darkTheme);
   return darkTheme;
@@ -19,8 +19,8 @@ export function getDarkTheme(): Theme {
 
 export function getLightTheme(): Theme {
   let lightTheme = createMuiTheme({
-    ...lightThemeOptions,
     ...commonThemeOptions,
+    ...lightThemeOptions,
   });
   lightTheme = responsiveFontSizes(lightTheme);
   return lightTheme;

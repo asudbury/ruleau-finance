@@ -21,13 +21,15 @@ export const themeOptions: ThemeOptions = {
     },
   },
   typography: {
+    fontFamily: "Montserrat",
+    button: {
+      textTransform: "none",
+      fontWeight: 600,
+    },
     body1: {
       fontWeight: 600,
     },
     body2: {
-      fontWeight: 600,
-    },
-    button: {
       fontWeight: 600,
     },
     caption: {
@@ -59,6 +61,44 @@ export const themeOptions: ThemeOptions = {
     },
     subtitle2: {
       fontWeight: 600,
+    },
+  },
+  overrides: {
+    MuiAppBar: {
+      colorPrimary: {
+        backgroundColor: "#161617",
+        color: "#ffff",
+      },
+    },
+    MuiButton: {
+      root: {
+        borderRadius: "2em",
+      },
+    },
+    MuiTabs: {
+      indicator: {
+        height: "0.3em",
+      },
+    },
+    MuiTab: {
+      wrapper: {
+        flexDirection: "row",
+      },
+      root: {
+        backgroundColor: "#161617",
+        color: "#0000000",
+      },
+    },
+    MuiSvgIcon: {
+      root: {
+        width: "1.3em",
+      },
+    },
+    MuiCard: {
+      root: {
+        borderRadius: "0.8em",
+        backgroundColor: "#fafafa",
+      },
     },
   },
 };
