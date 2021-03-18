@@ -61,5 +61,10 @@ export const themeOptions: ThemeOptions = {
         backgroundColor: "#1c1c1c",
       },
     },
+    MuiPaper: {
+      root: {
+        backgroundColor: "#1c1c1c",
+      },
+    },
   },
 };
