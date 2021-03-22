@@ -115,7 +115,7 @@ export default function CaseDetails({
         />
       </Grid>
 
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         {showPayload && (
           <Box
             fontFamily="Monospace"

@@ -34,7 +34,7 @@ export default function CaseContainer(): JSX.Element {
               onReopenCase={handleReopenCase}
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <CaseWarnings />
           </Grid>
           <Grid item xs={12}>
