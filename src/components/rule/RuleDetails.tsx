@@ -7,7 +7,7 @@ import {
   Divider,
 } from "@material-ui/core";
 import RuleDocumentation from "./RuleDocumentation";
-import RuleOverride from "./RuleOverride";
+import CaseRuleOverride from "../case/CaseRuleOverride";
 import { logInfo } from "../../utils/Logger";
 import CaseRulePayload from "../case/CaseRulePayload";
 
@@ -31,23 +31,14 @@ export default function RuleDetails({
   const [showDocumentation, setShowDocumentation] = React.useState<boolean>(
     false
   );
-  const [hasOverride, setHasOverride] = React.useState<boolean>(false);
 
   function handleShowDocumentation() {
     setShowDocumentation(!showDocumentation);
   }
 
-  function handleRemoveOverride() {
-    logInfo("handleRemoveOverride");
-    setHasOverride(false);
-  }
-
   function handleSaveOverride() {
     logInfo("handleSaveOverride");
-    setHasOverride(true);
   }
-
-  logInfo("hasOverride=" + hasOverride);
 
   return (
     <Grid container spacing={1}>
@@ -84,12 +75,11 @@ export default function RuleDetails({
       </Grid>
       <Grid item xs={1}></Grid>
       <Grid item xs={11}>
-        <RuleOverride
-          hasOverride={hasOverride}
-          canBeOverridden={canBeOverridden}
-          onSaveOverride={handleSaveOverride}
-          onRemoveOverride={handleRemoveOverride}
-          overrideMessage={overrideMessage}
+        <CaseRuleOverride
+          ruleName={"adrian0101"}
+          hasOverride={false}
+          onUpdateOverride={handleSaveOverride}
+          data-testid="aaa"
         />
       </Grid>
     </Grid>

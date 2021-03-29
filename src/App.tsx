@@ -94,6 +94,10 @@ const App = () => {
 
   function onLogin() {}
 
+  function handleHomePage() {
+    window.location.href = "/";
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
@@ -104,11 +108,13 @@ const App = () => {
                 edge="end"
                 color="inherit"
                 aria-label="home page"
-                onClick={() => window.open("/")}
+                onClick={handleHomePage}
               >
                 <LogoIcon fontSize="large" className={classes.logoButton} />
               </IconButton>
-              <Typography variant="h6">Ruleau</Typography>
+              <Typography variant="h6" onClick={handleHomePage}>
+                Ruleau
+              </Typography>
               <div className={classes.grow} />
               <div>
                 <Settings
@@ -116,9 +122,7 @@ const App = () => {
                   onDarkModeChange={onDarkModeChange}
                 />
               </div>
-              <div>
-                {!isLoggedIn && <LoggedOutStatus onLogin={onLogin} />}
-              </div>
+              <div>{!isLoggedIn && <LoggedOutStatus onLogin={onLogin} />}</div>
             </Toolbar>
           </AppBar>
         )}
