@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ruleau-finance/static/css/main.d7a83c16.chunk.css",
-    "main.js": "/ruleau-finance/static/js/main.f199e3ac.chunk.js",
-    "main.js.map": "/ruleau-finance/static/js/main.f199e3ac.chunk.js.map",
+    "main.js": "/ruleau-finance/static/js/main.67044132.chunk.js",
+    "main.js.map": "/ruleau-finance/static/js/main.67044132.chunk.js.map",
     "runtime-main.js": "/ruleau-finance/static/js/runtime-main.744bba0a.js",
     "runtime-main.js.map": "/ruleau-finance/static/js/runtime-main.744bba0a.js.map",
     "static/js/2.eaec6e06.chunk.js": "/ruleau-finance/static/js/2.eaec6e06.chunk.js",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.744bba0a.js",
     "static/js/2.eaec6e06.chunk.js",
     "static/css/main.d7a83c16.chunk.css",
-    "static/js/main.f199e3ac.chunk.js"
+    "static/js/main.67044132.chunk.js"
   ]
 }
