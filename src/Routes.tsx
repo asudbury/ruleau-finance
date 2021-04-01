@@ -17,7 +17,7 @@ export default function Routes(): JSX.Element {
     <BrowserRouter basename={baseName}>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/ruleau" component={HomePage} />
+        <Route exact path="/ruleau-finance" component={HomePage} />
         <Route exact path="/process/:processId" component={ProcessPage} />
         <Route exact path="/process/:processId/cases" component={ProcessPage} />
         <Route exact path="/process/:processId/rules" component={ProcessPage} />
