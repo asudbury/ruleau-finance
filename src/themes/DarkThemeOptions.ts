@@ -24,6 +24,49 @@ export const themeOptions: ThemeOptions = {
       hint: "#B7B7B7",
     },
   },
+  typography: {
+    fontFamily: "Montserrat",
+    button: {
+      textTransform: "none",
+      fontWeight: 500,
+    },
+    body1: {
+      fontWeight: 400,
+    },
+    body2: {
+      fontWeight: 400,
+    },
+    caption: {
+      fontWeight: 400,
+    },
+    h1: {
+      fontWeight: 700,
+    },
+    h2: {
+      fontWeight: 700,
+    },
+    h3: {
+      fontWeight: 700,
+    },
+    h4: {
+      fontWeight: 700,
+    },
+    h5: {
+      fontWeight: 700,
+    },
+    h6: {
+      fontWeight: 700,
+    },
+    overline: {
+      fontWeight: 400,
+    },
+    subtitle1: {
+      fontWeight: 600,
+    },
+    subtitle2: {
+      fontWeight: 600,
+    },
+  },
   overrides: {
     MuiAppBar: {
       colorPrimary: {

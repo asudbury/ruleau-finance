@@ -35,10 +35,10 @@ export default function RuleAccordion({
         </Grid>
       )}
       <Grid item style={{ minWidth: 120 }}>
-        <Typography>{ruleName}</Typography>
+        <Typography variant="subtitle1">{ruleName}</Typography>
       </Grid>
       <Grid item>
-        <Typography>{ruleDescription}</Typography>
+        <Typography variant="subtitle1">{ruleDescription}</Typography>
         <Typography variant="body2">{ruleSubDescription}</Typography>
       </Grid>
     </Grid>

@@ -1,16 +1,21 @@
-import { getAppTheme, getLightTheme, getDarkTheme } from "./ThemeManager";
+import { getTheme, getLightTheme, getDarkTheme } from "./ThemeManager";
 
-test("getAppTheme", () => {
-  const theme = getAppTheme();
+test("getTheme Dark", () => {
+  const theme = getTheme("dark");
   expect(theme.palette.type).toEqual("dark");
 });
 
-test("getAppTheme Dark", () => {
+test("getTheme Light", () => {
+  const theme = getTheme("light");
+  expect(theme.palette.type).toEqual("light");
+});
+
+test("getAppDarkTheme", () => {
   const theme = getDarkTheme();
   expect(theme.palette.type).toEqual("dark");
 });
 
-test("getAppTheme Light", () => {
+test("getLightTheme", () => {
   const theme = getLightTheme();
   expect(theme.palette.type).toEqual("light");
 });

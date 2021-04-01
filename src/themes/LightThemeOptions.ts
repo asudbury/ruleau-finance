@@ -5,13 +5,13 @@ export const themeOptions: ThemeOptions = {
   palette: {
     type: "light",
     primary: {
-      main: "#12c170",
+      main: "#12dcff",
       dark: "#17764a",
       light: "#75ff96",
       contrastText: "#1c1c1c",
     },
     secondary: {
-      main: "#006664",
+      main: "#12dcff",
       dark: "#003332",
     },
     text: {
@@ -24,37 +24,37 @@ export const themeOptions: ThemeOptions = {
     fontFamily: "Montserrat",
     button: {
       textTransform: "none",
-      fontWeight: 600,
+      fontWeight: 500,
     },
     body1: {
-      fontWeight: 600,
+      fontWeight: 400,
     },
     body2: {
-      fontWeight: 600,
+      fontWeight: 400,
     },
     caption: {
-      fontWeight: 600,
+      fontWeight: 400,
     },
     h1: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h2: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h3: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h4: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h5: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h6: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     overline: {
-      fontWeight: 600,
+      fontWeight: 400,
     },
     subtitle1: {
       fontWeight: 600,
