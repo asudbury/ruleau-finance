@@ -69,7 +69,7 @@ export default function ProcessPage() {
 
   function onCaseSelected(caseID: string) {
     history.push(
-      publicUrl + "/process/" + formattedProcessName + "/case/" + caseID
+      publicUrl + "/process/" + encodeURIComponent(formattedProcessName) + "/case/" + caseID
     );
   }
 
