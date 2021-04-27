@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
-import { Box, makeStyles, Tabs, Tab, AppBar } from "@material-ui/core";
+import { Box, makeStyles, Tabs, Tab, AppBar, Divider } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import WorkIcon from "@material-ui/icons/Work";
 import TimelineIcon from "@material-ui/icons/Timeline";
@@ -12,6 +12,9 @@ import Rules from "../components/process/Rules";
 import VersionHistory from "../components/process/VersionHistory";
 import Statistics from "../components/process/Statistics";
 import Overview from "../components/process/Overview";
+import AppBreadcrumbs, { Page } from "../components/AppBreadcrumbs";
+import useUrlManager from "../hooks/useUrlManager";
+import GetProcessSelector from "../services/selectors/GetProcessSelector";
 
 export default function ProcessPage() {
   const history = useHistory();
@@ -24,6 +27,7 @@ export default function ProcessPage() {
   }));
 
   const classes = useStyles();
+  const [publicUrl, formattedProcessName] = useUrlManager();
 
   enum TabValue {
     Cases,
@@ -57,32 +61,32 @@ export default function ProcessPage() {
   const openClosed: string[] = [opencloseParam];
   const result: string[] = [resultParam];
 
+  const process = GetProcessSelector(formattedProcessName);
+
   const handleTabChange = (event: React.ChangeEvent<{}>, value: number) => {
     setValue(value);
   };
 
   function onCaseSelected(caseID: string) {
-    const processId = sessionStorage.getItem("processId");
-
     history.push(
-      // eslint-disable-next-line no-useless-concat
-      "/process/" + processId + "/case/" + caseID
+      publicUrl + "/process/" + formattedProcessName + "/case/" + caseID
     );
   }
 
   function onHistoryItemSelected(version: string) {}
 
-  const processTitle = sessionStorage.getItem("processTitle");
-  const processDesc = sessionStorage.getItem("processUserDescription");
-
   return (
     <div className={classes.root}>
       <Box p={5}>
+        <AppBreadcrumbs page={Page.ProcessPage} />
+        <Box ml={5} mt={1} mr={1}>
+          <Divider />
+        </Box>
         <Typography variant="h5" gutterBottom>
-          Process: {processTitle}
+          Process: {process.name}
         </Typography>
         <Typography variant="body1" gutterBottom>
-          {processDesc}
+          {process.description}
         </Typography>
         <AppBar position="static">
           <Tabs

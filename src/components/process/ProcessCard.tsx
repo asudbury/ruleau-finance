@@ -40,30 +40,28 @@ export default function ProcessCard({
 
   const history = useHistory();
 
-  function setSessionVariables() {
-    sessionStorage.setItem("processId", processId.toString());
-    sessionStorage.setItem("processTitle", title);
-    sessionStorage.setItem("processUserDescription", userDescription);
+  function getFormattedTitle(title: string) {
+    return title.replace(new RegExp(" ", "g"), "-");
   }
 
   function onCasesToReview() {
-    setSessionVariables();
-    history.push("/process/" + processId + "/cases/?openclosed=1&result=3");
+    history.push(
+      "/ruleau-finance/process/" + getFormattedTitle(title) + "/cases/?openclosed=1&result=3"
+    );
   }
 
   function onCasesOverridden() {
-    setSessionVariables();
-    history.push("/process/" + processId + "/cases/?openclosed=2&result=1");
+    history.push(
+      "/ruleau-finance/process/" + getFormattedTitle(title) + "/cases/?openclosed=2&result=1"
+    );
   }
 
   function onStatistics() {
-    setSessionVariables();
-    history.push("/process/" + processId + "/statistics");
+    history.push("/ruleau-finance/process/" + getFormattedTitle(title) + "/statistics");
   }
 
   function onOverview() {
-    setSessionVariables();
-    history.push("/process/" + processId + "/overview");
+    history.push("/ruleau-finance/process/" + getFormattedTitle(title) + "/overview");
   }
   return (
     <Card>
