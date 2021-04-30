@@ -9,7 +9,6 @@ import {
 import RuleDocumentation from "./RuleDocumentation";
 import CaseRuleOverride from "../case/CaseRuleOverride";
 import CaseRuleOverrideHistory from "../case/CaseRuleOverrideHistory";
-import { logInfo } from "../../utils/Logger";
 import CaseRulePayload from "../case/CaseRulePayload";
 
 interface RuleDetailsProps {
@@ -38,7 +37,6 @@ export default function RuleDetails({
   }
 
   function handleSaveOverride() {
-    logInfo("handleSaveOverride");
   }
 
   return (

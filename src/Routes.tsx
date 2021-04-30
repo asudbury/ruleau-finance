@@ -3,10 +3,9 @@ import history from "../src/utils/History";
 import HomePage from "../src/pages/HomePage";
 import ProcessPage from "./pages/ProcessPage";
 import CasePage from "./pages/CasePage";
-import { logInfo } from "../src/utils/Logger";
+import LogViewer from "../src/components/LogViewer";
 
 export default function Routes(): JSX.Element {
-  logInfo("Public Url=" + process.env.PUBLIC_URL);
   return (
     <Router history={history}>
       <Switch>
@@ -65,6 +64,8 @@ export default function Routes(): JSX.Element {
           path="/ruleau-finance/process/:processId/case/:caseId"
           component={CasePage}
         />
+        <Route exact path="/log" component={LogViewer} />
+        <Route exact path="/ruleau-finance/log" component={LogViewer} />
       </Switch>
     </Router>
   );
