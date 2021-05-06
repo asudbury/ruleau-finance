@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import MaterialTable from "material-table";
 import { makeStyles } from "@material-ui/core";
 import TableIcons from "../table/TableIcons";
-import { logInfo } from "../../utils/Logger";
 import { API_URL, CASES } from "../../services/constants/Endpoints";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +30,6 @@ export default function Cases({ onCaseSelected }: CasesProps): JSX.Element {
     fetch(url)
       .then((response) => response.json())
       .then((res) => {
-        logInfo(res);
         setCaseData(res);
       });
   }, []);

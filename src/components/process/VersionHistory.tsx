@@ -4,7 +4,6 @@ import { makeStyles, TablePagination } from "@material-ui/core";
 import TableIcons from "../table/TableIcons";
 import SubjectIcon from "@material-ui/icons/Subject";
 import { VersionHistoryMockData } from "../../mockData/VersionHistoryMockData";
-import { logInfo } from "../../utils/Logger";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -50,9 +49,6 @@ export default function VersionHistory({
       <MaterialTable
         title=""
         icons={TableIcons}
-        onFilterChange={(filters) => {
-          logInfo("onFilterChange filters=" + filters);
-        }}
         components={{
           Pagination: (props) => (
             <TablePagination

@@ -14,7 +14,7 @@ import {
 } from "@material-ui/core";
 import SubjectIcon from "@material-ui/icons/Subject";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-import { logInfo } from "../../utils/Logger";
+
 interface RuleOverrideProps {
   hasOverride: boolean;
   canBeOverridden: boolean;
@@ -30,7 +30,6 @@ export default function RuleOverride({
   onRemoveOverride,
   overrideMessage,
 }: RuleOverrideProps) {
-  logInfo("hasOverride=" + hasOverride);
 
   return (
     <Grid container spacing={1}>
