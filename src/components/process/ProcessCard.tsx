@@ -14,6 +14,7 @@ import {
 } from "@material-ui/core";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import AssignmentIcon from "@material-ui/icons/Assignment";
+import BallotIcon from "@material-ui/icons/Ballot";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -46,28 +47,37 @@ export default function ProcessCard({
 
   function onCasesToReview() {
     history.push(
-      "/ruleau-finance/process/" + getFormattedTitle(title) + "/cases/?openclosed=1&result=3"
+      "/ruleau-finance/process/" +
+        getFormattedTitle(title) +
+        "/cases/?openclosed=1&result=3"
     );
   }
 
   function onCasesOverridden() {
     history.push(
-      "/ruleau-finance/process/" + getFormattedTitle(title) + "/cases/?openclosed=2&result=1"
+      "/ruleau-finance/process/" +
+        getFormattedTitle(title) +
+        "/cases/?openclosed=2&result=1"
     );
   }
 
   function onStatistics() {
-    history.push("/ruleau-finance/process/" + getFormattedTitle(title) + "/statistics");
+    history.push(
+      "/ruleau-finance/process/" + getFormattedTitle(title) + "/statistics"
+    );
   }
 
   function onOverview() {
-    history.push("/ruleau-finance/process/" + getFormattedTitle(title) + "/overview");
+    history.push(
+      "/ruleau-finance/process/" + getFormattedTitle(title) + "/overview"
+    );
   }
   return (
-    <Card>
+    <Card variant="outlined">
       <CardHeader
+        avatar={<BallotIcon color="primary" />}
         title={title}
-        titleTypographyProps={{ color: "primary" }}
+        titleTypographyProps={{ color: "primary", variant: "h6" }}
         subheader={userDescription}
       />
       <Box p={1}>
