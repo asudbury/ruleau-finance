@@ -27,6 +27,7 @@ import Overview from "../components/process/Overview";
 import AppBreadcrumbs, { Page } from "../components/AppBreadcrumbs";
 import useUrlManager from "../hooks/useUrlManager";
 import GetProcessSelector from "../services/selectors/GetProcessSelector";
+import { logDebug } from "../utils/Logger";
 
 export default function ProcessPage() {
   const history = useHistory();
@@ -84,6 +85,8 @@ export default function ProcessPage() {
   };
 
   function onCaseSelected(caseID: string) {
+    logDebug("ProcessPage", "caseId=" + caseID);
+    localStorage.setItem("caseId", caseID);
     history.push(
       publicUrl +
         "/process/" +
