@@ -16,11 +16,11 @@ export default function CaseContainer(): JSX.Element {
   const [isClosed, setIsClosed] = useState(false);
 
   function handleCloseCase() {
-    setIsClosed(true);
+    /// setIsClosed(true);
   }
 
   function handleReopenCase() {
-    setIsClosed(false);
+    /// setIsClosed(false);
   }
 
   return (

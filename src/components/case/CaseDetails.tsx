@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import {
   Grid,
   Typography,
   Select,
   MenuItem,
-  Button,
   FormControlLabel,
   Switch,
   Box,
 } from "@material-ui/core";
 import LabelAndValue from "../core/LabelAndValue";
+import RuleauProgressButton from "../core/RuleauProgressButton";
 
 interface CaseDetailsProps {
   isClosed: boolean;
@@ -22,16 +23,37 @@ export default function CaseDetails({
   onCloseCase,
   onReopenCase,
 }: CaseDetailsProps) {
+  const history = useHistory();
   const [showPayload, setShowPayload] = useState(false);
 
   function handleShowPayload() {
     setShowPayload(!showPayload);
   }
 
+  function handleCloseCase() {
+    setLoading(true);
+
+    setTimeout(() => {
+      onCloseCase();
+      history.goBack();
+    }, 1000);
+  }
+
+  function handleReopenCase() {
+    setLoading(true);
+
+    setTimeout(() => {
+      onReopenCase();
+      history.goBack();
+    }, 1000);
+  }
+
   let caseId = "Unknown";
 
   const storageItem = sessionStorage.getItem("caseID");
 
+  const [loading, setLoading] = useState(false);
+  
   if (storageItem) {
     caseId = storageItem;
   }
@@ -84,26 +106,22 @@ export default function CaseDetails({
       </Grid>
       <Grid item xs={12} sm={6}>
         {!isClosed && (
-          <Button
-            data-testid="closeCase"
-            type="submit"
-            variant="outlined"
-            color="primary"
-            onClick={onCloseCase}
-          >
-            Close Case
-          </Button>
+          <RuleauProgressButton
+            datatestid="closeCase"
+            arialabel="Close Case Button"
+            onClick={handleCloseCase}
+            loading={loading}
+            content="Close Case"
+          />
         )}
         {isClosed && (
-          <Button
-            data-testid="reopenCase"
-            type="submit"
-            variant="outlined"
-            color="primary"
-            onClick={onReopenCase}
-          >
-            Reopen Case
-          </Button>
+          <RuleauProgressButton
+            datatestid="reopenCase"
+            arialabel="Reopen Case Button"
+            onClick={handleReopenCase}
+            loading={loading}
+            content="Reopen Case"
+          />
         )}
       </Grid>
       <Grid item xs={11}>
