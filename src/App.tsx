@@ -75,7 +75,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const App = () => {
-  localStorage.setItem("lastCaseId", "");
+  localStorage.removeItem("lastCaseId");
+  localStorage.removeItem("overrideId");
+  localStorage.removeItem("overrideApplied");
+  localStorage.removeItem("overrideReason");
 
   const classes = useStyles();
 
