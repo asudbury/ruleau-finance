@@ -75,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const App = () => {
+  localStorage.setItem("lastCaseId", "");
+
   const classes = useStyles();
 
   const isLoggedIn = IsUserLoggedIn();

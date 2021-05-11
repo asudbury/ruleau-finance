@@ -71,7 +71,7 @@ export default function Cases({
   //// const cases = GetCases();
   const caseData = CaseMockData;
 
-  const lastUpdateId = localStorage.getItem("caseId");
+  const lastUpdateId = localStorage.getItem("lastCaseId");
 
   logDebug("MockCases2", "lastUpdateId=" + lastUpdateId);
 
@@ -90,7 +90,7 @@ export default function Cases({
     if (selectedRow) {
       const caseId = selectedRow.caseID;
 
-      sessionStorage.setItem("caseID", caseId);
+      sessionStorage.setItem("lastCaseId", caseId);
       onCaseSelected(caseId);
     }
   }
