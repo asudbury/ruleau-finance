@@ -14,12 +14,14 @@ import {
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import SortIcon from "@material-ui/icons/Sort";
 import WorkIcon from "@material-ui/icons/Work";
+import SubjectIcon from "@material-ui/icons/Subject";
 import TimelineIcon from "@material-ui/icons/Timeline";
 import EqualizerIcon from "@material-ui/icons/Equalizer";
 import ZoomInIcon from "@material-ui/icons/ZoomIn";
 import FullscreenIcon from "@material-ui/icons/Fullscreen";
 import FullscreenExitIcon from "@material-ui/icons/FullscreenExit";
 import Cases from "../components/process/MockCases2";
+import Overrides from "../components/process/Overrides";
 import Rules from "../components/process/Rules";
 import VersionHistory from "../components/process/VersionHistory";
 import Statistics from "../components/process/Statistics";
@@ -48,8 +50,9 @@ export default function ProcessPage() {
 
   enum TabValue {
     Cases,
+    Overrides,
     Rules,
-    History,
+    VersionHistory,
     Statistics,
     Overview,
   }
@@ -68,7 +71,7 @@ export default function ProcessPage() {
     selectedTabValue = TabValue.Overview;
   }
 
-  const [value, setValue] = useState(selectedTabValue);
+  const [value, setValue] = useState<TabValue>(selectedTabValue);
 
   const urlParams = new URLSearchParams(window.location.search);
 
@@ -109,9 +112,6 @@ export default function ProcessPage() {
     <div className={classes.root}>
       <Box p={5}>
         <AppBreadcrumbs page={Page.ProcessPage} />
-        <Box ml={5} mt={1} mr={1}>
-          <Divider />
-        </Box>
         <FullScreen handle={handle}>
           <AppBar position="static">
             <Toolbar>
@@ -150,11 +150,16 @@ export default function ProcessPage() {
               onChange={handleTabChange}
             >
               <Tab icon={<WorkIcon />} label="Cases" value={TabValue.Cases} />
+              <Tab
+                icon={<SubjectIcon />}
+                label="Overrides"
+                value={TabValue.Overrides}
+              />
               <Tab icon={<SortIcon />} label="Rules" value={TabValue.Rules} />
               <Tab
                 icon={<TimelineIcon />}
                 label="History"
-                value={TabValue.History}
+                value={TabValue.VersionHistory}
               />
               <Tab
                 icon={<EqualizerIcon />}
@@ -168,19 +173,22 @@ export default function ProcessPage() {
               />
             </Tabs>
           </AppBar>
-          {value === 0 && (
+          {value === TabValue.Cases && (
             <Cases
               openClosed={openClosed}
-              result={result}
               onCaseSelected={onCaseSelected}
+              result={result}
             />
           )}
-          {value === 1 && <Rules />}
-          {value === 2 && (
+          {value === TabValue.Overrides && (
+            <Overrides onCaseSelected={onCaseSelected} />
+          )}
+          {value === TabValue.Rules && <Rules />}
+          {value === TabValue.VersionHistory && (
             <VersionHistory onHistoryItemSelected={onHistoryItemSelected} />
           )}
-          {value === 3 && <Statistics />}
-          {value === 4 && <Overview />}
+          {value === TabValue.Statistics && <Statistics />}
+          {value === TabValue.Overview && <Overview />}
         </FullScreen>
       </Box>
     </div>

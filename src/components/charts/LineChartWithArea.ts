@@ -3,7 +3,7 @@ const LineChartWithArea = {
   type: "Line",
   data: {
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    series: [[5, 9, 7, 8, 5, 3, 5, 4]],
+    series: [[5, 9, 7, 8, 5, 6, 5, 4]],
   },
   options: {
     showArea: true,
