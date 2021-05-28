@@ -18,24 +18,32 @@ const rulesData = [
     ruleDescription: "KYC Risk is low",
     ruleSubDescription:
       "Check KYC customer risk to ensure it is within parameters",
+    overrideMessage: "",
+    overrideLevel: "NO OVERRIDE",
     hasWarning: true,
   },
   {
     ruleName: "RUL002",
     ruleDescription: "No bankruptcy flag",
     ruleSubDescription: "Borrower should not have filed any bankruptcies",
+    overrideMessage: "Strong evidence of steady income needed to override",
+    overrideLevel: "2",
     hasWarning: false,
   },
   {
     ruleName: "RUL003",
     ruleDescription: "No open tax liens",
     ruleSubDescription: "Borrower should not have any open tax liens",
+    overrideMessage: "Open tax lien must be about to expire or < £100/month",
+    overrideLevel: "2",
     hasWarning: false,
   },
   {
     ruleName: "RUL004",
     ruleDescription: "No CCJs",
     ruleSubDescription: "Borrower should not have any County Court Judgements",
+    overrideMessage: "Only override on manager’s authority",
+    overrideLevel: "3",
     hasWarning: true,
   },
   {
@@ -43,6 +51,8 @@ const rulesData = [
     ruleDescription: "No hard enquiries",
     ruleSubDescription:
       "Borrower should not have any hard enquiries in the past 6 months",
+    overrideMessage: "Confirm hard enquiry is about to expire",
+    overrideLevel: "1",
     hasWarning: false,
   },
 ];
@@ -134,11 +144,11 @@ export default function CaseRules(): JSX.Element {
           <AccordionDetails>
             <RuleDetails
               canBeOverridden={false}
-              overrideMessage=""
+              overrideMessage={rule.overrideMessage}
               ruleName={rule.ruleName}
               ruleDescription={rule.ruleDescription}
               ruleSubDescription={rule.ruleSubDescription}
-              overrideLevel="NO OVERRIDE"
+              overrideLevel={rule.overrideLevel}
             />
           </AccordionDetails>
         </Accordion>
