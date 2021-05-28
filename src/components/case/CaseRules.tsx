@@ -87,12 +87,18 @@ export default function CaseRules(): JSX.Element {
     }
   }, [selectedRuleWarning]);
 
-  function getRefPointer(ruleName: string): React.RefObject<HTMLDivElement> {
+  function getRefPointer(
+    ruleName: string
+  ): React.RefObject<HTMLDivElement> | null {
     const result = refs.filter((ref) => {
       return ref.ruleName === ruleName;
     });
 
-    return result[0].refPointer;
+    if (result) {
+      return result[0].refPointer;
+    }
+
+    return null;
   }
 
   function expandAccordion(ruleName: string): boolean {
