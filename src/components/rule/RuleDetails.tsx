@@ -28,16 +28,14 @@ export default function RuleDetails({
   overrideLevel,
   overrideMessage,
 }: RuleDetailsProps) {
-  const [showDocumentation, setShowDocumentation] = React.useState<boolean>(
-    false
-  );
+  const [showDocumentation, setShowDocumentation] =
+    React.useState<boolean>(false);
 
   function handleShowDocumentation() {
     setShowDocumentation(!showDocumentation);
   }
 
-  function handleSaveOverride() {
-  }
+  function handleSaveOverride() {}
 
   return (
     <Grid container spacing={1}>
@@ -82,6 +80,7 @@ export default function RuleDetails({
           ruleName={"adrian0101"}
           hasOverride={false}
           onUpdateOverride={handleSaveOverride}
+          overrideMessage={overrideMessage}
           data-testid="aaa"
         />
       </Grid>
