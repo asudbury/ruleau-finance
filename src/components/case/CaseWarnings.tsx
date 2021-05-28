@@ -17,11 +17,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CaseWarnings() {
+interface CaseWarningsProps {
+  onWarningSelected: (ruleName: string) => void;
+}
+
+export default function CaseWarnings({
+  onWarningSelected,
+}: CaseWarningsProps): JSX.Element {
   const classes = useStyles();
 
   function handleRuleWarningSelected(rule: string) {
-    console.log("hello " + rule);
+    onWarningSelected(rule);
   }
 
   return (
