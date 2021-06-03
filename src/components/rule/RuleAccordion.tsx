@@ -23,6 +23,9 @@ export default function RuleAccordion({
     warning: {
       color: theme.palette.warning.main,
     },
+    success: {
+      color: theme.palette.success.main,
+    },
   }));
 
   const classes = useStyles();
@@ -32,7 +35,7 @@ export default function RuleAccordion({
       {!isRuleDefinition && (
         <Grid item>
           {hasWarning && <WarningIcon className={classes.warning} />}
-          {!hasWarning && <DoneIcon />}
+          {!hasWarning && <DoneIcon className={classes.success} />}
         </Grid>
       )}
       {isRuleDefinition && (
