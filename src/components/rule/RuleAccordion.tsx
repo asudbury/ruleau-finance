@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles, Grid, Typography } from "@material-ui/core";
 import WarningIcon from "@material-ui/icons/Warning";
 import DoneIcon from "@material-ui/icons/Done";
+import SortIcon from "@material-ui/icons/Sort";
 
 interface RuleSummaryProps {
   isRuleDefinition: boolean;
@@ -32,6 +33,11 @@ export default function RuleAccordion({
         <Grid item>
           {hasWarning && <WarningIcon className={classes.warning} />}
           {!hasWarning && <DoneIcon />}
+        </Grid>
+      )}
+      {isRuleDefinition && (
+        <Grid item>
+          <SortIcon color="primary" />
         </Grid>
       )}
       <Grid item style={{ minWidth: 120 }}>
