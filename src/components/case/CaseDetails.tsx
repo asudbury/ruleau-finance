@@ -17,12 +17,14 @@ interface CaseDetailsProps {
   isClosed: boolean;
   onCloseCase: () => void;
   onReopenCase: () => void;
+  onShowRuleDocumentation: () => void;
 }
 
 export default function CaseDetails({
   isClosed,
   onCloseCase,
   onReopenCase,
+  onShowRuleDocumentation,
 }: CaseDetailsProps) {
   const history = useHistory();
 
@@ -50,13 +52,6 @@ export default function CaseDetails({
       onReopenCase();
       history.goBack();
     }, 1000);
-  }
-
-  function handleRuleDocumentation() {
-    window.open(
-      process.env.PUBLIC_URL + "/process/Platinum-Credit-Card/rules",
-      "_blank"
-    );
   }
 
   const [loading, setLoading] = useState(false);
@@ -138,7 +133,7 @@ export default function CaseDetails({
       <Grid item xs={12} sm={6}>
         <Link
           href="#"
-          onClick={handleRuleDocumentation}
+          onClick={onShowRuleDocumentation}
           color="textPrimary"
           style={{ textDecoration: "underline" }}
         >

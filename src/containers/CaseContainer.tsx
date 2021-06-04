@@ -11,7 +11,13 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function CaseContainer(): JSX.Element {
+interface CaseContainerProps {
+  onShowRuleDocumentation: () => void;
+}
+
+export default function CaseContainer({
+  onShowRuleDocumentation,
+}: CaseContainerProps): JSX.Element {
   const classes = useStyles();
 
   const [isClosed, setIsClosed] = useState(false);
@@ -37,6 +43,7 @@ export default function CaseContainer(): JSX.Element {
               isClosed={isClosed}
               onCloseCase={handleCloseCase}
               onReopenCase={handleReopenCase}
+              onShowRuleDocumentation={onShowRuleDocumentation}
             />
           </Grid>
           <Grid item xs={12} md={6}>
