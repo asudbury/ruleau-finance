@@ -18,6 +18,9 @@ import {
 } from "@material-ui/core";
 import AssessmentIcon from "@material-ui/icons/Assessment";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
+import NetworkWifiIcon from "@material-ui/icons/NetworkWifi";
+import BorderColorIcon from "@material-ui/icons/BorderColor";
 import LabelAndValue from "../core/LabelAndValue";
 
 const useStyles = makeStyles(() => ({
@@ -103,7 +106,17 @@ export default function RuleDocumentation({
                   id="panel1a-header"
                   className={classes.ExpandedIcon}
                 >
-                  <Typography variant="caption">Examples</Typography>
+                  <Grid container spacing={1} direction="row">
+                    <Grid item>
+                      <FormatListNumberedIcon
+                        color="secondary"
+                        fontSize="small"
+                      />
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="caption">Examples</Typography>
+                    </Grid>
+                  </Grid>
                 </AccordionSummary>
                 <AccordionDetails>
                   <TableContainer>
@@ -152,7 +165,14 @@ export default function RuleDocumentation({
                   id="panel2a-header"
                   className={classes.ExpandedIcon}
                 >
-                  <Typography variant="caption">Test Coverage</Typography>
+                  <Grid container spacing={1} direction="row">
+                    <Grid item>
+                      <NetworkWifiIcon color="secondary" fontSize="small" />
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="caption">Test Coverage</Typography>
+                    </Grid>
+                  </Grid>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography variant="body2">
@@ -167,7 +187,14 @@ export default function RuleDocumentation({
                   id="panel2a-header"
                   className={classes.ExpandedIcon}
                 >
-                  <Typography variant="caption">Source Code</Typography>
+                  <Grid container spacing={1} direction="row">
+                    <Grid item>
+                      <BorderColorIcon color="secondary" fontSize="small" />
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="caption">Source Code</Typography>
+                    </Grid>
+                  </Grid>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Box
