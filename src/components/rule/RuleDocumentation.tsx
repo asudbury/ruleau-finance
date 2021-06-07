@@ -199,7 +199,7 @@ export default function RuleDocumentation({
                 <AccordionDetails>
                   <Box
                     fontFamily="Monospace"
-                    fontSize="h6.fontSize"
+                    fontSize="p.fontSize"
                     border={1}
                     p={1}
                   >
