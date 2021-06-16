@@ -122,7 +122,7 @@ export default function RuleDocumentation({
                 </AccordionSummary>
                 <AccordionDetails>
                   <TableContainer>
-                    <Table>
+                    <Table size="small">
                       <TableHead>
                         <TableRow>
                           <TableCell>Input</TableCell>
@@ -131,27 +131,29 @@ export default function RuleDocumentation({
                       </TableHead>
                       <TableBody>
                         <TableRow>
-                          <TableCell
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              flexWrap: "wrap",
-                            }}
-                          >
-                            <AssessmentIcon color="primary" /> {"{'age'}"}: 17
+                          <TableCell>
+                            <div
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                              }}
+                            >
+                              <AssessmentIcon color="primary" /> {"{'age'}"}: 17
+                            </div>
                           </TableCell>
                           <TableCell>False</TableCell>
                         </TableRow>
                         <TableRow>
-                          <TableCell
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              flexWrap: "wrap",
-                            }}
-                          >
-                            <AssessmentIcon color="primary" />
-                            {"{'age'}"}: 21
+                          <TableCell>
+                            <div
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                              }}
+                            >
+                              <AssessmentIcon color="primary" />
+                              {"{'age'}"}: 21
+                            </div>
                           </TableCell>
                           <TableCell>True</TableCell>
                         </TableRow>
