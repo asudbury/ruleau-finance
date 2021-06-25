@@ -8,7 +8,11 @@ export default function CasePage() {
   const [open, setOpen] = useState(false);
 
   function handleShowRuleDocumentation() {
-    setOpen(true);
+    if (open) {
+      setOpen(false);
+    } else {
+      setOpen(true);
+    }
   }
 
   function handleHideRuleDocumentation() {
