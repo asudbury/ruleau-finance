@@ -8,13 +8,13 @@ export const VersionHistoryMockData = [
   {
     created: "23 Jul 2020 13:10",
     version: "2",
-    updatedBy: "Charlie Anderson",
+    updatedBy: "Bob Flem",
     description: "Previous - 80 cases processed",
   },
   {
     created: "21 Jul 2020 13:10",
     version: "1",
-    updatedBy: "Morgan Atkins",
+    updatedBy: "John Doe",
     description: "Previous - 60 cases processed",
   },
 ];

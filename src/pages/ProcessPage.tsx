@@ -108,6 +108,7 @@ export default function ProcessPage() {
   function handleFullScreenExit() {
     handle.exit();
   }
+  
   return (
     <div className={classes.root}>
       <Box p={5}>

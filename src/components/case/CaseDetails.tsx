@@ -8,10 +8,11 @@ import {
   MenuItem,
   FormControlLabel,
   Switch,
-  Box,
 } from "@material-ui/core";
+import ContactSupportOutlinedIcon from "@material-ui/icons/ContactSupportOutlined";
 import LabelAndValue from "../core/LabelAndValue";
 import RuleauProgressButton from "../core/RuleauProgressButton";
+import RuleauSyntaxHighlighter from "../core/RuleauSyntaxHighlighter";
 
 interface CaseDetailsProps {
   isClosed: boolean;
@@ -55,6 +56,8 @@ export default function CaseDetails({
   }
 
   const [loading, setLoading] = useState(false);
+
+  const payload = '{"kyc": "low", "ccjs": [], "fico_score": 150 }';
 
   return (
     <Grid container spacing={2}>
@@ -131,28 +134,29 @@ export default function CaseDetails({
         />
       </Grid>
       <Grid item xs={12} sm={6}>
-        <Link
-          href="#"
-          onClick={onShowRuleDocumentation}
-          color="textPrimary"
-          style={{ textDecoration: "underline" }}
-        >
-          Rule Documentation
-        </Link>
+        <Grid container direction="row" data-testid="infoMessage">
+          <Grid item>
+            <ContactSupportOutlinedIcon
+              fontSize="small"
+              onClick={onShowRuleDocumentation}
+              style={{ cursor: "hand" }}
+            />
+          </Grid>
+          <Grid item>
+            <Link
+              href="#"
+              onClick={onShowRuleDocumentation}
+              color="textPrimary"
+              style={{ textDecoration: "underline" }}
+            >
+              Rule Documentation
+            </Link>
+          </Grid>
+        </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
         {showPayload && (
-          <Box
-            fontFamily="Monospace"
-            fontSize="h6.fontSize"
-            border={1}
-            p={1}
-            style={{ maxHeight: 300, overflow: "auto" }}
-          >
-            {"{ "}
-            "kyc": "low", "ccjs": [], "fico_score": 150
-            {" }"}
-          </Box>
+          <RuleauSyntaxHighlighter text={payload} language="json" />
         )}
       </Grid>
     </Grid>

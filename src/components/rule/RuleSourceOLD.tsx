@@ -48,7 +48,7 @@ export default function RuleSource() {
             <Divider />
             <Box p={3}>
               <Typography variant="body2">
-                if customer.calculated_income &gt; 50000 then pass
+                if customer.income &gt; 50000 then pass
                 <br /> else if sum(customer.capital_gains.yearly.dividends) &gt;
                 50000 then pass <br /> else fail
               </Typography>

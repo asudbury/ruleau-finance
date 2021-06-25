@@ -80,11 +80,6 @@ export default function RuleDocumentation({
             <div>
               <LabelAndValue
                 variant="body2"
-                label="Rule Identifier"
-                value={ruleName}
-              />
-              <LabelAndValue
-                variant="body2"
                 label="Description"
                 value={description}
               />
@@ -99,7 +94,8 @@ export default function RuleDocumentation({
                 value="Other rule"
               />
               <Typography variant="body2">&nbsp;</Typography>
-              <Accordion>
+
+                <Accordion>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -203,7 +199,7 @@ export default function RuleDocumentation({
                     border={1}
                     p={1}
                   >
-                    if customer.calculated_income &gt; 50000 then pass
+                    if customer.income &gt; 50000 then pass
                     <br /> else if sum(customer.capital_gains.yearly.dividends)
                     &gt; 50000 then pass <br /> else fail
                   </Box>

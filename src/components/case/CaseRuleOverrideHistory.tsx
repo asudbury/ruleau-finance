@@ -79,7 +79,7 @@ export default function CaseRuleOverrideHistory() {
                     Applied
                   </div>
                 </TableCell>
-                <TableCell>Morgan Atkins</TableCell>
+                <TableCell>John Doe</TableCell>
                 <TableCell>lorem ipsum</TableCell>
               </TableRow>
               <TableRow>
@@ -102,7 +102,7 @@ export default function CaseRuleOverrideHistory() {
                     Removed
                   </div>
                 </TableCell>
-                <TableCell>Lucy Cox</TableCell>
+                <TableCell>John Smith</TableCell>
                 <TableCell>lorem ipsum</TableCell>
               </TableRow>
               {override && hasUpdate && (

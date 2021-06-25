@@ -7,7 +7,6 @@ import {
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import RuleAccordion from "../rule/RuleAccordion";
-import RuleSource from "../rule/RuleSource";
 import RuleDocumentation from "../rule/RuleDocumentation2";
 
 export default function Rules() {
@@ -29,7 +28,6 @@ export default function Rules() {
         </AccordionSummary>
         <AccordionDetails>
           <Box>
-            <RuleSource />
             <RuleDocumentation
               showSwitch={true}
               ruleName="RUL001"
@@ -56,7 +54,6 @@ export default function Rules() {
         </AccordionSummary>
         <AccordionDetails>
           <Box>
-            <RuleSource />
             <RuleDocumentation
               showSwitch={true}
               ruleName="RUL002"
@@ -83,7 +80,6 @@ export default function Rules() {
         </AccordionSummary>
         <AccordionDetails>
           <Box>
-            <RuleSource />
             <RuleDocumentation
               showSwitch={true}
               ruleName="RUL003"
@@ -110,7 +106,6 @@ export default function Rules() {
         </AccordionSummary>
         <AccordionDetails>
           <Box>
-            <RuleSource />
             <RuleDocumentation
               showSwitch={true}
               ruleName="RUL004"
@@ -137,7 +132,6 @@ export default function Rules() {
         </AccordionSummary>
         <AccordionDetails>
           <Box>
-            <RuleSource />
             <RuleDocumentation
               showSwitch={true}
               ruleName="RUL005"

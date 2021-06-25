@@ -48,7 +48,7 @@ export default function RuleOverride({
                 >
                   <SubjectIcon color="primary" /> 01 Jan 2020
                 </TableCell>
-                <TableCell>Morgan Atkins</TableCell>
+                <TableCell>Bob Flem</TableCell>
                 <TableCell>lorem ipsum</TableCell>
                 <TableCell>Applied</TableCell>
               </TableRow>
@@ -62,7 +62,7 @@ export default function RuleOverride({
                 >
                   <SubjectIcon color="primary" /> 01 Apr 2020
                 </TableCell>
-                <TableCell>Lucy Cox</TableCell>
+                <TableCell>John Smith</TableCell>
                 <TableCell>lorem ipsum</TableCell>
                 <TableCell>Removed</TableCell>
               </TableRow>
