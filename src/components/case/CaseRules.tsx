@@ -50,7 +50,7 @@ const rulesData = [
     ruleName: "RUL005",
     ruleDescription: "No hard enquiries",
     ruleSubDescription:
-      "Borrower should not have any hard enquiries in the past 6 months",
+      "Borrower should not have any enquiries in past 6 months",
     overrideMessage: "Confirm hard enquiry is about to expire",
     overrideLevel: "1",
     hasWarning: false,

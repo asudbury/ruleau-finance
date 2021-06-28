@@ -127,7 +127,7 @@ export default function Rules() {
             hasWarning={false}
             ruleName="RUL005"
             ruleDescription="No hard enquiries"
-            ruleSubDescription="Borrower should not have any hard enquiries in the past 6 months"
+            ruleSubDescription="Borrower should not have any enquiries in past 6 months"
           />
         </AccordionSummary>
         <AccordionDetails>
@@ -136,7 +136,7 @@ export default function Rules() {
               showSwitch={true}
               ruleName="RUL005"
               ruleDescription="No hard enquiries"
-              ruleSubDescription="Borrower should not have any hard enquiries in the past 6 months"
+              ruleSubDescription="Borrower should not have any enquiries in past 6 months"
               overrideLevel="1"
             />
           </Box>

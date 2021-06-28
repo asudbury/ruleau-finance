@@ -6,7 +6,7 @@ import Rules from "../components/process/Rules";
 
 const useStyles = makeStyles(() => ({
   drawerPaper: {
-    width: "60%",
+    width: "40%",
   },
 }));
 
